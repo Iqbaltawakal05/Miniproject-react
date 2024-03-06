@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 function SingleUser () {
     const [singleUser, setSingleUser] = useState({});
@@ -27,6 +28,9 @@ function SingleUser () {
                     <h1>{singleUser.first_name}</h1>
                     <p>{singleUser.email}</p>
                     <img src={singleUser.avatar} alt=""/>
+                    <Link to={`/user`}>
+                        <button>Back</button>
+                    </Link>
                 </div>
             }
         </div>
