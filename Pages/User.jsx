@@ -1,12 +1,13 @@
 import Navbar from "../Components/Navbar"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 function User () {
     const [User, setUser] = useState([])
 
     const getUserdata = () => {
-        axios.get('https://reqres.in/api/users?page=2')
+        axios.get('https://reqres.in/api/users/')
         .then((res) => setUser(res.data.data))
         .catch((err) => console.log(err))
     }
@@ -24,6 +25,9 @@ function User () {
                         <h1>{item.first_name}</h1>
                         <p>{item.email}</p>
                         <img src={item.avatar} alt=""/>
+                        <Link to={`/user/${item.id}`}>
+                            <button>Detail</button>
+                        </Link>
                     </div>
                 ))
             }
