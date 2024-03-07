@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes, useRoutes } from "react-router-dom";
 
-import { routeList } from "./Route/routes";
+import { routeList } from "../Route/Routes";
 
 const App = () => {
   const element = useRoutes(routeList);
