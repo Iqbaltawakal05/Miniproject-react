@@ -27,10 +27,6 @@ function Login () {
         .catch((err) => console.log(err))
     }
 
-    useEffect(() => {
-        Logins()
-    }, [])
-
     return (
         <div>
             <Navbar/>
