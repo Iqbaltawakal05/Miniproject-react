@@ -1,3 +1,4 @@
+import Navbar from "../Components/Navbar" 
 import { useNavigate } from 'react-router-dom';
 function Home () {
     const Navigate = useNavigate();
@@ -10,6 +11,7 @@ function Home () {
 
     return (
         <div>
+            <Navbar />
             {token ? (
                 <button onClick={logout}>Logout</button>
             ) : (

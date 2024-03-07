@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
+import { useNavigate } from "react-router-dom"
 function Register () {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [notif, setNotif] = useState('')
+    const [loading, setLoading] = useState(false)
+
+    const navigate = useNavigate()
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
     }
@@ -19,8 +23,16 @@ function Register () {
             password: password,
         }
 
+        setLoading(true)
+
         axios.post('https://reqres.in/api/register', payload)
-            .then((res) => setNotif('Register Success'))
+            .then((res) => { 
+                setNotif('Register Success')
+                setLoading(false)
+                setTimeout(() => {
+                    navigate('/login')
+                }, 2000)
+            })
             .catch((err) => setNotif(err.res.data.error))
     }
 
@@ -31,7 +43,7 @@ function Register () {
             {!!notif.length && <h1>{notif}</h1>}
             <input type="text" placeholder="Email" onChange={handleEmailChange}/>
             <input type="password" placeholder="Add Password" onChange={handlePasswordChange}/>
-            <button onClick={handleRegister}>Register</button>
+            <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Register"}</button>
             <Link to={'/login'}>
                 <button>Login</button>
             </Link>

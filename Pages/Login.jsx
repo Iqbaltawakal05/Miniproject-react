@@ -1,4 +1,4 @@
-import Navbar from "../Components/Navbar"
+
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
@@ -48,7 +48,6 @@ function Login () {
 
     return (
         <div>
-            <Navbar/>
             <h1>Login</h1>
             {!!notif.length && <h1>{notif}</h1>}
 
