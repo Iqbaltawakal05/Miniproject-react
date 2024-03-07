@@ -16,8 +16,13 @@ function Login () {
         setPassword(e.target.value)
     }
 
-    const Logins = () => {
-        axios.post('https://reqres.in/api/login')
+    const handleLogin = () => {
+        const payload = {
+            username: Username,
+            password: Password,
+        }
+
+        axios.post('https://reqres.in/api/login', payload)
         .then((res) => console.log(res))
         .catch((err) => console.log(err))
     }
@@ -32,7 +37,7 @@ function Login () {
             <h1>Login</h1>
             <input type="text" placeholder="Username" onChange={handleUsernameChange} value={Username}/>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
-            <button>Login</button>
+            <button onClick={handleLogin}>Login</button>
             <button>Register</button>
         </div>
     )}
