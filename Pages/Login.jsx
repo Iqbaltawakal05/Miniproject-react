@@ -1,13 +1,16 @@
 import Navbar from "../Components/Navbar"
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 
 function Login () {
     const [Username, setUsername] = useState("")
     const [Password, setPassword] = useState("")
     const [notif, setNotif] = useState("")
+    const [loading, setLoading] = useState(false)
+
+    const Navigate = useNavigate()
     
 
     const handleUsernameChange = (e) => {
@@ -24,12 +27,22 @@ function Login () {
             password: Password,
         }
 
+        setLoading(true)
+
         axios.post('https://reqres.in/api/login', payload)
         .then((res) => {
             setNotif('Login Success')
+            setLoading(false)
+            const token = res.data.token
+            localStorage.setItem('access_token', token)
+            setTimeout(() => {
+                Navigate('/');
+            }, 2000)
         })
         .catch((err) => {
             setNotif(err.response.data.error)
+            setLoading(false)
+
         })
     }
 
@@ -41,7 +54,7 @@ function Login () {
 
             <input type="text" placeholder="Username" onChange={handleUsernameChange} value={Username}/>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
-            <button onClick={handleLogin}>Login</button>
+            <button disabled={loading} onClick={handleLogin}>{loading ? "Loading..." : "Login"}</button>
             <Link to={'/register'}>
                 <button>Register</button>
             </Link>
