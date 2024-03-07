@@ -6,6 +6,7 @@ import axios from "axios"
 function Login () {
     const [Username, setUsername] = useState("")
     const [Password, setPassword] = useState("")
+    const [notif, setNotif] = useState("")
     
 
     const handleUsernameChange = (e) => {
@@ -23,14 +24,20 @@ function Login () {
         }
 
         axios.post('https://reqres.in/api/login', payload)
-        .then((res) => console.log(res))
-        .catch((err) => console.log(err))
+        .then((res) => {
+            setNotif('Login Success')
+        })
+        .catch((err) => {
+            setNotif(err.response.data.error)
+        })
     }
 
     return (
         <div>
             <Navbar/>
             <h1>Login</h1>
+            {!!notif.length && <h1>{notif}</h1>}
+            
             <input type="text" placeholder="Username" onChange={handleUsernameChange} value={Username}/>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
             <button onClick={handleLogin}>Login</button>
