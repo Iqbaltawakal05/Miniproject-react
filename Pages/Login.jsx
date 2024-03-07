@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar"
 import { useEffect, useState } from "react"
 import axios from "axios"
+import { Link } from "react-router-dom"
 
 
 function Login () {
@@ -37,11 +38,13 @@ function Login () {
             <Navbar/>
             <h1>Login</h1>
             {!!notif.length && <h1>{notif}</h1>}
-            
+
             <input type="text" placeholder="Username" onChange={handleUsernameChange} value={Username}/>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
             <button onClick={handleLogin}>Login</button>
-            <button>Register</button>
+            <Link to={'/register'}>
+                <button>Register</button>
+            </Link>
         </div>
     )}
 export default Login
