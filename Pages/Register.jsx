@@ -4,7 +4,7 @@ import axios from "axios"
 function Register () {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-
+    const [notif, setNotif] = useState('')
     const handleEmailChange = (e) => {
         setEmail(e.target.value)
     }
@@ -20,14 +20,15 @@ function Register () {
         }
 
         axios.post('https://reqres.in/api/register', payload)
-            .then((res) => console.log(res))
-            .catch((err) => console.log(err))
+            .then((res) => setNotif('Register Success'))
+            .catch((err) => setNotif(err.res.data.error))
     }
 
 
     return (
         <div>
             <h1>Register</h1>
+            {!!notif.length && <h1>{notif}</h1>}
             <input type="text" placeholder="Email" onChange={handleEmailChange}/>
             <input type="password" placeholder="Add Password" onChange={handlePasswordChange}/>
             <button onClick={handleRegister}>Register</button>
