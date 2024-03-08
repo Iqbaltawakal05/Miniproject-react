@@ -21,7 +21,6 @@ function SingleUser () {
     
     return (
         <div>
-            <p>single user</p>
             {
                 singleUser &&
                 <div>
