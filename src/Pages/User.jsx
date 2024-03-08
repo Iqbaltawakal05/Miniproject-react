@@ -2,6 +2,7 @@ import Navbar from "../Components/Navbar"
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link } from "react-router-dom"
+import Layout from "../Components/Layout"
 
 function User () {
     const [User, setUser] = useState([])
@@ -17,8 +18,7 @@ function User () {
     }, [])
 
     return (
-        <div>
-            <Navbar />
+        <Layout>
             <h1>User</h1>
             {User.map((item) => (
                     <div>
@@ -31,7 +31,7 @@ function User () {
                     </div>
                 ))
             }
-        </div>
+        </Layout>
     )
 }
 

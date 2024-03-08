@@ -1,6 +1,7 @@
 import Navbar from "../Components/Navbar" 
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Layout from "../Components/Layout"
 function Home () {
     const Navigate = useNavigate();
     const token = localStorage.getItem('access_token')
@@ -11,8 +12,7 @@ function Home () {
     }
 
     return (
-        <div>
-            <Navbar />
+        <Layout>
             {token ? (
                 <button onClick={logout}>Logout</button>
             ) : (
@@ -21,7 +21,7 @@ function Home () {
                 </Link>
             )}
             <h1>Home</h1>
-        </div>
+        </Layout>
     )
 }
 
