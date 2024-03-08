@@ -50,7 +50,7 @@ function Register () {
             <input type="password" placeholder="Add Password" onChange={handlePasswordChange}/>
             <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Sign Up"}</button>
             <div className="link-register">
-            <p>Already have an account?</p>
+                <p>Already have an account?</p>
             <Link to={'/login'}>
                 <a href="">Sign in</a>
             </Link>
