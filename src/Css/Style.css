@@ -1,0 +1,31 @@
+.Navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 3vh;
+}
+
+.Navbar a {
+    color: #b38531;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+
+}
+
+.Navbar a:hover {
+    color: #e3b04b;
+}
+
+.Navbar button {
+    background: #b38531;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.Navbar button:hover {
+    background: #e3b04b;
+}
