@@ -3,6 +3,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import loginlogo from "../img/Login.svg"
+import "../Css/login.css"
 
 function Login () {
     const [Username, setUsername] = useState("")
@@ -51,15 +52,15 @@ function Login () {
         <div className="login-container">
             <img src={loginlogo} alt="login icon"/>
         <div className="login-form">
-            <h1>Login</h1>
+            <h1>Sign in</h1>
             {!!notif.length && <h1>{notif}</h1>}
-            <input type="text" placeholder="Username" onChange={handleUsernameChange} value={Username}/>
+            <input type="text" placeholder="Username/Email" onChange={handleUsernameChange} value={Username}/>
             <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
-            <button disabled={loading} onClick={handleLogin}>{loading ? "Loading..." : "Login"}</button>
+            <button disabled={loading} onClick={handleLogin}>{loading ? "Loading..." : "Sign in"}</button>
             <div className="link-register">
             <p>Don't have an account?</p>
             <Link to={'/register'}>
-                <a href="#">Register</a>
+                <a href="">Sign up</a>
             </Link>
             </div>
         </div>

@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import "../Css/register.css"
+import loginlogo from "../img/Login.svg"
 function Register () {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -38,15 +40,23 @@ function Register () {
 
 
     return (
-        <div>
-            <h1>Register</h1>
+        <div className="register-body">
+        <div className="register-container">
+            <img src={loginlogo} alt="login icon"/>
+        <div className="register-form">
+            <h1>Sign up</h1>
             {!!notif.length && <h1>{notif}</h1>}
             <input type="text" placeholder="Email" onChange={handleEmailChange}/>
             <input type="password" placeholder="Add Password" onChange={handlePasswordChange}/>
-            <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Register"}</button>
+            <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Sign Up"}</button>
+            <div className="link-register">
+            <p>Already have an account?</p>
             <Link to={'/login'}>
-                <button>Login</button>
+                <a href="">Sign in</a>
             </Link>
+            </div>
+        </div>
+        </div>
         </div>
     )
 }
