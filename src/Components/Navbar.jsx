@@ -11,7 +11,7 @@ function Navbar () {
     }
 
     return (
-        <div className="Navbar">
+        <div className="navbar">
             <Link to={"/"}><a href="">Home</a></Link>
             <Link to={"/user"}>User</Link>
             {token ? (

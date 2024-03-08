@@ -3,7 +3,8 @@ import { useState } from "react"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import "../Css/register.css"
-import loginlogo from "../img/Login.svg"
+import loginlogo from "../img/login.svg"
+
 function Register () {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')

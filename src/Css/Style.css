@@ -1,4 +1,4 @@
-.Navbar {
+.navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -6,7 +6,7 @@
     padding-top: 3vh;
 }
 
-.Navbar a {
+.navbar a {
     color: #b38531;
     font-weight: bold;
     text-decoration: none;
@@ -14,18 +14,38 @@
 
 }
 
-.Navbar a:hover {
+.navbar a:hover {
     color: #e3b04b;
 }
 
-.Navbar button {
+.navbar button {
     background: #b38531;
     border: none;
     color: white;
     font-weight: bold;
     cursor: pointer;
+    padding: 1vh;
+    min-width: 7%;
+    font-size: 110%;
+    border-radius: 5%;
 }
 
-.Navbar button:hover {
+.navbar button:hover {
     background: #e3b04b;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+    padding-top: 3vh;
+}
+
+.footer p {
+    color: #b38531;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 20px;
+
 }
