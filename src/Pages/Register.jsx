@@ -47,7 +47,7 @@ function Register () {
         <div className="register-form">
             <h1>Sign up</h1>
             {!!notif.length && <h1>{notif}</h1>}
-            <input type="text" placeholder="Email" onChange={handleEmailChange}/>
+            <input type="text" placeholder="Add Email" onChange={handleEmailChange}/>
             <input type="password" placeholder="Add Password" onChange={handlePasswordChange}/>
             <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Sign Up"}</button>
             <div className="link-register">
