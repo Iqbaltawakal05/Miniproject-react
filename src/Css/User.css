@@ -27,3 +27,9 @@
     height: 20vh;
     border-radius: 50%;
 }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
