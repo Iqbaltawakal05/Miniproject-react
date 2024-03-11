@@ -1,4 +1,6 @@
-const Card = () => {
+import { Link } from "react-router-dom"
+
+const Card = ({ item }) => {
     return (
         <div className="user">
             <img src={item.avatar} alt=""/>

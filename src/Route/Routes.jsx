@@ -9,9 +9,7 @@ export const routeList = [
     {
         path: "/",  
         element:
-        <ProtectedRoute>
             <Home />
-        </ProtectedRoute>
     },
     {
         path: "/user",

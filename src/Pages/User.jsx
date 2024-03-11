@@ -3,6 +3,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import Layout from "../Components/Layout"
 import "../Css/User.css"
+import Card from "../Components/Card"
 
 function User () {
     const [User, setUser] = useState([])
@@ -58,15 +59,8 @@ function User () {
         <Layout>
             <h1 className="user-title">User</h1>
             <div className="user-body">
-            {User.map((item) => (
-                    <div className="user">
-                        <img src={item.avatar} alt=""/>
-                        <h1>{item.first_name}</h1>
-                        <p>{item.email}</p>
-                        <Link to={`/user/${item.id}`}>
-                            <button>Detail</button>
-                        </Link>
-                    </div>
+            {User.map((props) => (
+                    <Card key={props} item={props}/>
                 ))
             }
             </div>
