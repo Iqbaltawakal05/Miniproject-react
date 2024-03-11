@@ -3,6 +3,7 @@ import axios from "axios"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
 import "./SingleUser.css"
+import ImgFollow from "../../Components/ImgFollow/ImgFollow"
 import headeruser from "../../img/headerUser.jpg"
 
 function SingleUser () {
@@ -19,7 +20,7 @@ function SingleUser () {
     useEffect(() => {
         getSingleUser()
     }, [])
-    
+
     return (
         <div>
             {
@@ -36,6 +37,7 @@ function SingleUser () {
                     <h3>About</h3>
                     <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iusto aperiam, quo dolorem nulla eveniet vitae et dolores dicta molestias perspiciatis voluptatum cum quos, repellat sapiente iure velit nisi corrupti.</h5>
                     <h3>Following</h3>
+                    <ImgFollow/>
                     </div>
                     {/* <Link to={`/user`}>
                         <button>Back</button>

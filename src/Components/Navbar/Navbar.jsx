@@ -17,6 +17,7 @@ function Navbar () {
             </div>
             <div className="nav">
             <Link to={"/user"}><a href="">User</a></Link>
+            <Link to={"/imgFollow"}><a href="">image</a></Link>
             </div>
             <div className="nav-button"> 
             {token ? (

@@ -30,10 +30,6 @@
 
 }
 
-.avatar:hover {
-    transform: scale(1.2);
-}
-
 .singleuser-body {
     min-height: 80vh;
     width: 50%;
@@ -84,8 +80,9 @@
     background-color: #f9f9f9;
     width: 200%;
     position: relative;
-    bottom: 40vh;
+    bottom: 42vh;
     left: 32vw;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
 }
 

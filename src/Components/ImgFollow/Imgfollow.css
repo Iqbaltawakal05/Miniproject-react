@@ -1,0 +1,18 @@
+.imgFollow {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.imgFollow img {
+    width: 10%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 0;
+    margin-left: 20px;
+}
+
+.imgFollow img:hover {
+    transform: scale(1.5);
+    transition: 0.1s;
+}
