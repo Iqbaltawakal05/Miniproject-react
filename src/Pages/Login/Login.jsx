@@ -2,8 +2,8 @@
 import { useState } from "react"
 import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
-import loginlogo from "../img/login.svg"
-import "../Css/Login.css"
+import loginlogo from "../../img/login.svg"
+import "./Login.css"
 function Login () {
     const [Username, setUsername] = useState("")
     const [Password, setPassword] = useState("")

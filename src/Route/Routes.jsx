@@ -1,8 +1,8 @@
-import Home from "../Pages/Home"
-import User from "../Pages/User"
-import SingleUser from "../Pages/SingleUser"
-import Login from "../Pages/Login"
-import Register from "../Pages/Register"
+import Home from "../Pages/Home/Home"
+import User from "../Pages/User/User"
+import SingleUser from "../Pages/Singleuser/SingleUser"
+import Login from "../Pages/Login/Login"
+import Register from "../Pages/Register/Register"
 import ProtectedRoute from "./protectedRoute"
 
 export const routeList = [

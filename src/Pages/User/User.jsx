@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import Layout from "../Components/Layout"
-import "../Css/User.css"
-import Card from "../Components/Card/Card"
+import Layout from "../../Components/Layout"
+import "./User.css"
+import Card from "../../Components/Card/Card"
 
 function User () {
     const [User, setUser] = useState([])
