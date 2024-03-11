@@ -11,16 +11,22 @@ function Navbar () {
     }
 
     return (
-        <div className="navbar">
-            <Link to={"/"}><a href="">Home</a></Link>
-            <Link to={"/user"}>User</Link>
+        <div className="navbar-container">
+            <div className="logo">
+                <Link to={"/"}><a href="">Userly</a></Link>
+            </div>
+            <div className="nav">
+            <Link to={"/user"}><a href="">User</a></Link>
+            </div>
+            <div className="nav-button"> 
             {token ? (
-                <button onClick={logout}>Logout</button>
+                <button onClick={logout}><i class="bi bi-box-arrow-left"></i> Logout</button>
             ) : (
                 <Link to={'/login'}>
                     <button>Login</button>
                 </Link>
             )}
+            </div>
         </div>
     )
 }
