@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
-import "../Css/Style.css"
+import "./Navbar.css"
 function Navbar () {
     const Navigate = useNavigate();
     const token = localStorage.getItem('access_token')

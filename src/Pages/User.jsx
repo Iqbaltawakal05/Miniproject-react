@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
-import { Link } from "react-router-dom"
 import Layout from "../Components/Layout"
 import "../Css/User.css"
 import Card from "../Components/Card/Card"
