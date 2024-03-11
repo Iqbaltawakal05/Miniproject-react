@@ -1,8 +1,9 @@
-
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import { Link } from "react-router-dom"
+import "./SingleUser.css"
+import headeruser from "../../img/headerUser.jpg"
 
 function SingleUser () {
     const [singleUser, setSingleUser] = useState({});
@@ -23,13 +24,24 @@ function SingleUser () {
         <div>
             {
                 singleUser &&
-                <div>
-                    <h1>{singleUser.first_name}</h1>
+                <div className="singleuser">
+                    <img className="headeruser" src={headeruser} alt="headerUser" />
+                    <div className="singleuser-container">
+                    <img className="avatar" src={singleUser.avatar} alt=""/>
+                    <div className="singleuser-body">
+                    <h1>{singleUser.first_name} {singleUser.last_name}</h1>
                     <p>{singleUser.email}</p>
-                    <img src={singleUser.avatar} alt=""/>
-                    <Link to={`/user`}>
+                    <button>Edit Profile</button>
+                    <div className="about">
+                    <h3>About</h3>
+                    <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique iusto aperiam, quo dolorem nulla eveniet vitae et dolores dicta molestias perspiciatis voluptatum cum quos, repellat sapiente iure velit nisi corrupti.</h5>
+                    <h3>Following</h3>
+                    </div>
+                    {/* <Link to={`/user`}>
                         <button>Back</button>
-                    </Link>
+                    </Link> */}
+                    </div>
+                    </div>
                 </div>
             }
         </div>
