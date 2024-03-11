@@ -3,7 +3,7 @@ import axios from "axios"
 import { Link } from "react-router-dom"
 import Layout from "../Components/Layout"
 import "../Css/User.css"
-import Card from "../Components/Card"
+import Card from "../Components/Card/Card"
 
 function User () {
     const [User, setUser] = useState([])
@@ -57,6 +57,7 @@ function User () {
 
     return (
         <Layout>
+            <div className="user">
             <h1 className="user-title">User</h1>
             <div className="user-body">
             {User.map((props) => (
@@ -71,6 +72,7 @@ function User () {
                 <button disabled={pagination.currentPage === pagination.totalPages} onClick={handleNext}>
                 next
                 </button>
+            </div>
             </div>
         </Layout>
     )
