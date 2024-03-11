@@ -1,3 +1,12 @@
+.login{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    border : 3px solid black;
+    border-width: 3vw;
+}
+
 .login-body {
     min-height: 100vh;
     display: flex;
@@ -72,4 +81,16 @@
     color: #e3b04b;
     font-weight: bold;
     text-decoration: none;
+}
+
+@media screen and (max-width: 700px) {
+    .login-container {
+        flex-direction: column;
+    }
+
+    .login-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
 }

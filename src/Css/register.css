@@ -61,3 +61,15 @@
     font-weight: bold;
     cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .register-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}

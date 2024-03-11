@@ -74,7 +74,7 @@ function User () {
                 <button disabled={pagination.currentPage === 1} onClick={handleBack}>
                 back
                 </button>
-                <button disabled={!pagination.currentPage === pagination.totalPages} onClick={handleNext}>
+                <button disabled={pagination.currentPage === pagination.totalPages} onClick={handleNext}>
                 next
                 </button>
             </div>
