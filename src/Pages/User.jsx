@@ -7,14 +7,12 @@ import Card from "../Components/Card/Card"
 function User () {
     const [User, setUser] = useState([])
     const [pagination, setPagination] = useState({
-    perPage: 0,
-    total: 0,
+    per_Page: 6,
+    total: 12,
+    total_Pages: 2,
+    page: 2,
     currentPage: 1,
-    totalPages: 0,
-    previousPage: 0,
-    nextPage: 0,
   });
-
     const getUserdata = () => {
         axios.get(`https://reqres.in/api/users?page=${pagination.currentPage}`)
         .then((res) => {
@@ -22,9 +20,9 @@ function User () {
         setPagination({
           ...pagination,
           page: res.data.page,
-          perPage: res.per_Page,
+          per_Page: res.per_Page,
           total: res.data.total,
-          totalPages: res.data.totalPages,    
+          total_Pages: res.data.total_Pages,    
         });
       })
       .catch((err) => console.log(err));
@@ -68,7 +66,11 @@ function User () {
                 <button disabled={pagination.currentPage === 1} onClick={handleBack}>
                 back
                 </button>
-                <button disabled={pagination.currentPage === pagination.totalPages} onClick={handleNext}>
+                <div className="pagination-button">
+                <button disabled={pagination.currentPage === 1} onClick={() => setPagination({ ...pagination, currentPage: 1 })}>1</button>
+                <button disabled={pagination.currentPage === 2} onClick={() => setPagination({ ...pagination, currentPage: 2 })}>2</button>
+                </div>
+                <button disabled={pagination.currentPage === 2} onClick={handleNext}>
                 next
                 </button>
             </div>

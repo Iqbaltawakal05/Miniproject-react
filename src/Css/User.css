@@ -24,4 +24,33 @@
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    gap: 5px;
+    padding-bottom: 20px;
+}
+
+.pagination button {
+    background: #b38531;
+    border: none;
+    color: #ebebed;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    min-width: 10%;
+    font-size: 110%;
+    border-radius: 5%;
+}
+
+.pagination button:hover {
+    background: #e3b04b;
+}
+
+.pagination button:disabled {
+    background: #ccc;
+    border: #5a5d60;
+    color: #5a5d60;
+}
+
+.pagination-button {
+    display: flex;
+    gap: 5px;
 }
