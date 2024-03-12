@@ -1,5 +1,6 @@
 .singleuser {
     background-color: #f0f0f0;
+    height: 130vh;
 }
 
 
@@ -10,11 +11,13 @@
     height: 300px;
     object-fit: cover;
     position: absolute;
+
 }
 
 .singleuser-container {
     margin-left: 100px;
     width: 50%;
+    height: 100vh;
 }
 
 .singleuser-container img {
@@ -31,7 +34,7 @@
 }
 
 .singleuser-body {
-    min-height: 80vh;
+    height: 100vh;
     width: 50%;
     margin-top: 13%;
     display: flex;
@@ -41,9 +44,10 @@
 }
 
 .singleuser-body h1 {
-    color: #3a4152;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 50px;
+    color: #262525;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 45px;
     margin-top: 19vh;
     text-align: center;
 
@@ -52,7 +56,7 @@
 .singleuser-body p {
     font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 500;
-    color: #aeb3b9;
+    color: #afafaf;
     font-size: 20px;
     margin-bottom: 10px;
     padding-bottom: 10px;
@@ -71,6 +75,7 @@
     font-size: 20px;
     width: 70%;
     margin-left: 15%;
+    margin-top: 3vh;
 }
 
 .about {
@@ -87,9 +92,10 @@
 }
 
 .about h3 {
-    color: #3a4152;
-    font-family: system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 30px;
+    color: #000000;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 630;
+    font-size: 25px;
     margin-left: 2vw;
     margin-top: 3vh;
 }
@@ -100,5 +106,81 @@
     margin-left: 2vw;
     padding: 10px;
     font-style: italic;
-    color: #bfc3c7;
+    color: #afafaf;
+}
+
+@media screen and (max-width: 1300px) {
+    .singleuser {
+            background-color: #f0f0f0;
+            height: 175vh;
+        }
+
+    .headeruser {
+        position: static;
+
+    }
+
+    .singleuser-container {
+        margin-left: 0px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .singleuser-container img {
+        margin-left: 0vw;
+    }
+
+    .avatar {
+        position: relative;
+        top: 1vh;
+        border-radius: 100%;
+        width: 250px;
+    }
+
+    .singleuser-body {
+        height: 100vh;
+        width: 100%;
+        margin-top: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .singleuser-body h1 {
+        font-weight: 600;
+        font-size: 45px;
+        margin-top: 5vh;
+        text-align: center;
+
+    }
+
+    .singleuser-body button {
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 3vh;
+    }
+
+    .about {
+        border: none;
+        background-color: #f0f0f0;
+        border-radius: none;
+        padding: 0px;
+        width: 100%;
+        position: static;
+        bottom: 0vh;
+        left: 0vw;
+        box-shadow: none;
+        margin-top: 10vh;
+        }
+
+    .about h3 {
+        text-align: center;
+    }
+
+    .about h5 {
+        text-align: center;
+    }
 }

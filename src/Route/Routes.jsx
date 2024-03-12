@@ -20,10 +20,6 @@ export const routeList = [
         </ProtectedRoute>
     },
     {
-        path: "/imgFollow",
-        element: <ImgFollow />,
-    },
-    {
         path: "/user/:id",
         element:
         <ProtectedRoute>
