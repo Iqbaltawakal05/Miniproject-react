@@ -20,7 +20,7 @@ function Navbar () {
             </div>
             <div className="nav-button"> 
             {token ? (
-                <button onClick={logout}><i class="bi bi-box-arrow-left"></i> Logout</button>
+                <button onClick={logout}><i class="bi bi-box-arrow-left"></i><p>Logout</p></button>
             ) : (
                 <Link to={'/login'}>
                     <button>Login</button>
