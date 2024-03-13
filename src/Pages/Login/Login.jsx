@@ -4,6 +4,7 @@ import axios from "axios"
 import { Link, useNavigate } from "react-router-dom"
 import loginlogo from "../../img/login.svg"
 import "./Login.css"
+import { loginAPI } from "../../Utils/API"
 function Login () {
     const [Username, setUsername] = useState("")
     const [Password, setPassword] = useState("")
@@ -29,7 +30,7 @@ function Login () {
 
         setLoading(true)
 
-        axios.post('https://reqres.in/api/login', payload)
+        axios.post(loginAPI, payload)
         .then((res) => {
             setNotif('Login Success')
             setLoading(false)

@@ -4,6 +4,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom"
 import "./register.css"
 import loginlogo from "../../img/login.svg"
+import { registerAPI } from "../../Utils/API"
 
 function Register () {
     const [email, setEmail] = useState('')
@@ -28,7 +29,7 @@ function Register () {
 
         setLoading(true)
 
-        axios.post('https://reqres.in/api/register', payload)
+        axios.post(registerAPI, payload)
             .then((res) => { 
                 setNotif('Register Success')
                 setLoading(false)

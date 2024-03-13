@@ -3,6 +3,7 @@ import axios from "axios"
 import Layout from "../../Components/Layout"
 import "./User.css"
 import Card from "../../Components/Card/Card"
+import { userAPI } from "../../Utils/API"
 
 function User () {
     const [User, setUser] = useState([])
@@ -14,7 +15,7 @@ function User () {
     currentPage: 1,
   });
     const getUserdata = () => {
-        axios.get(`https://reqres.in/api/users?page=${pagination.currentPage}`)
+        axios.get(userAPI(pagination.currentPage))
         .then((res) => {
         setUser(res.data.data);
         setPagination({

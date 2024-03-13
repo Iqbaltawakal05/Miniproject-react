@@ -6,6 +6,7 @@ import "./SingleUser.css"
 import ImgFollow from "../../Components/ImgFollow/ImgFollow"
 import headeruser from "../../img/headerUser.jpg"
 import Layout from "../../Components/Layout"
+import { singleUserAPI } from "../../Utils/API"
 
 function SingleUser () {
     const [singleUser, setSingleUser] = useState({});
@@ -13,7 +14,7 @@ function SingleUser () {
     const { id } = useParams();
     
     const getSingleUser = () => {
-        axios.get(`https://reqres.in/api/users/${id}`)
+        axios.get(singleUserAPI(id))
         .then((res) => setSingleUser(res.data.data))
         .catch((err) => console.log(err))
     }
