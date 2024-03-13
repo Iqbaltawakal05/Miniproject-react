@@ -13,10 +13,7 @@ function Navbar () {
     return (
         <div className="navbar-container">
             <div className="logo">
-                <Link to={"/"}><a href="">Userly</a></Link>
-            </div>
-            <div className="nav">
-            <Link to={"/user"}><a href="">User</a></Link>
+                <Link to={"/user"}><a href="">Userly</a></Link>
             </div>
             <div className="nav-button"> 
             {token ? (

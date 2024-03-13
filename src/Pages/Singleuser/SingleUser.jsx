@@ -34,7 +34,7 @@ function SingleUser () {
                     <h1>{singleUser.first_name} {singleUser.last_name}</h1>
                     <p>{singleUser.email}</p>
                     <button>Edit Profile</button>
-                    <Link to={`/user`}>
+                    <Link to={`/`}>
                         <button>Back</button>
                     </Link>
                     <div className="about">

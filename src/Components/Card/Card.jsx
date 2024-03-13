@@ -11,7 +11,7 @@ const Card = ({ item }) => {
             <p>{item.email}</p>
             <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
             <div className="card-button">
-            <Link to={`/user/${item.id}`}>
+            <Link to={`/${item.id}`}>
                 <button><i class="bi bi-person"></i> Profile</button>
             </Link>
                 <button><i class="bi bi-trash"></i> delete</button>
