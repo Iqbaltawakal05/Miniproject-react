@@ -50,7 +50,7 @@ function Register () {
             <img src={loginlogo} alt="login icon"/>
         <div className="register-form">
             <h1>Sign up</h1>
-            {!!notif.length && <h1>{notif}</h1>}
+            {!!notif.length && <h5>{notif}</h5>}
             <input type="text" placeholder="Enter Email" onChange={handleEmailChange}/>
             <input type="password" placeholder="Enter Password" onChange={handlePasswordChange}/>
             <button disabled={loading} onClick={handleRegister}>{loading ? "Loading..." : "Sign Up"}</button>
