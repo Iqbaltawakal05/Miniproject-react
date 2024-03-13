@@ -6,7 +6,7 @@ import "./Card.css"
 const Card = ({ item }) => {
 
     return (
-        <div className="card-container">
+        <div className="card-container" data-aos="fade-up">
             <div className="card">
             <img src={item.avatar} alt=""/>
             <h1>{item.first_name} {item.last_name}</h1>
