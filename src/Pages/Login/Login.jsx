@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom"
 import axios from "axios"
 // ---- Css & Img ----
 import "./Login.css"
-import loginlogo from "../../img/login.svg"
+import loginlogo from "../../Assets/login.svg"
 function Login () {
     const [Username, setUsername] = useState("")
     const [Password, setPassword] = useState("")

@@ -9,7 +9,7 @@ import axios from "axios"
 // ---- Css & Img ----
 import "./SingleUser.css"
 import ImgFollow from "../../Components/ImgFollow/ImgFollow"
-import headeruser from "../../img/headerUser.jpg"
+import headeruser from "../../Assets/headerUser.jpg"
 // ---- Components ----
 import Layout from "../../Components/Layout"
 

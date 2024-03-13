@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom"
 // ---- Axios ----
 import axios from "axios"
 // ---- Css & Img ----
-import loginlogo from "../../img/login.svg"
+import loginlogo from "../../Assets/login.svg"
 import "./register.css"
 
 function Register () {
