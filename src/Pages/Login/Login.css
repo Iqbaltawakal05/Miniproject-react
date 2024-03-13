@@ -1,10 +1,13 @@
-.login{
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+.login-page {
+    min-height: 100vh;
     width: 100%;
-    border : 3px solid black;
-    border-width: 3vw;
+    position: relative;
+}
+
+.login-page svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .login-body {
@@ -51,6 +54,12 @@
     margin-bottom: 20px;
 }
 
+.login-form h5 {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 .login-form input {
     width: 120%;
     padding: 10px;
@@ -84,6 +93,10 @@
 }
 
 @media screen and (max-width: 700px) {
+    .login-page svg {
+        display: none;
+    }
+
     .login-container {
         flex-direction: column;
     }
@@ -93,4 +106,6 @@
         height: auto;
         margin-bottom: 20px;
     }
+
+
 }
