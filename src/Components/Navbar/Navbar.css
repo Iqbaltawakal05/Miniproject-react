@@ -21,6 +21,14 @@
     
 }
 
+.logo span {
+    color: #bfc3c7;
+}
+
+.logo span:hover {
+    color: #ccc;
+}
+
 .logo a:hover {
     color: #e3b04b;
 }
