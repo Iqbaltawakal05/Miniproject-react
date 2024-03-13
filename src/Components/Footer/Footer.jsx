@@ -1,8 +1,8 @@
-import "../Css/Style.css"
+import "./Footer.css"
 function Footer () {
     return (
         <div className="footer">
-            <p>Copyright &copy; Muhamad iqbal tawakal 2024</p>
+            <p>&copy; 2024 Muhamad iqbal tawakal</p>
         </div>
     )
 }
