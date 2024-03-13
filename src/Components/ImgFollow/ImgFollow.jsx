@@ -1,12 +1,17 @@
-import axios from "axios"
 import { useEffect, useState } from "react"
+
+// ---- API ----
+import { imgFollowAPI } from "../../Utils/API";
+// ---- Axios ----
+import axios from "axios"
+// ---- Css ----
 import "./Imgfollow.css"
 
 const ImgFollow = () => {
     const [Following, setFollowing] = useState([])
 
     const getFollowing = () => {
-        axios.get('https://reqres.in/api/users?page=2')
+        axios.get(imgFollowAPI)
         .then((res) => setFollowing(res.data.data))
         .catch((err) => console.log(err))
     }

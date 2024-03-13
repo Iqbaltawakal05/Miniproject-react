@@ -1,4 +1,6 @@
+// ---- React Router DOM ----
 import { Link } from "react-router-dom"
+// ---- Css ----
 import "./Card.css"
 
 const Card = ({ item }) => {

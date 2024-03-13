@@ -1,10 +1,14 @@
-import { Link } from "react-router-dom"
 import { useState } from "react"
-import axios from "axios"
-import { useNavigate } from "react-router-dom"
-import "./register.css"
-import loginlogo from "../../img/login.svg"
+
+// ---- API ----
 import { registerAPI } from "../../Utils/API"
+// ---- React router DOM ----
+import { Link, useNavigate } from "react-router-dom"
+// ---- Axios ----
+import axios from "axios"
+// ---- Css & Img ----
+import loginlogo from "../../img/login.svg"
+import "./register.css"
 
 function Register () {
     const [email, setEmail] = useState('')

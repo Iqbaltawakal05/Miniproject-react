@@ -1,12 +1,17 @@
 import { useEffect, useState } from "react"
+
+// ---- API ----
+import { singleUserAPI } from "../../Utils/API"
+// ---- React Router DOM ----
+import { Link, useParams } from "react-router-dom"
+// ---- Axios ----
 import axios from "axios"
-import { useParams } from "react-router-dom"
-import { Link } from "react-router-dom"
+// ---- Css & Img ----
 import "./SingleUser.css"
 import ImgFollow from "../../Components/ImgFollow/ImgFollow"
 import headeruser from "../../img/headerUser.jpg"
+// ---- Components ----
 import Layout from "../../Components/Layout"
-import { singleUserAPI } from "../../Utils/API"
 
 function SingleUser () {
     const [singleUser, setSingleUser] = useState({});
