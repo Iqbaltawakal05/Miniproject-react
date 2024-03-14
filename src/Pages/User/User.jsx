@@ -18,6 +18,7 @@ function User () {
     total_Pages: 2,
     page: 2,
     currentPage: 1,
+    lastPage: 2
   });
     const getUserdata = () => {
         axios.get(userAPI(pagination.currentPage))
@@ -76,7 +77,7 @@ function User () {
                 <button disabled={pagination.currentPage === 1} onClick={() => setPagination({ ...pagination, currentPage: 1 })}>1</button>
                 <button disabled={pagination.currentPage === 2} onClick={() => setPagination({ ...pagination, currentPage: 2 })}>2</button>
                 </div>
-                <button disabled={pagination.currentPage === 2} onClick={handleNext}>
+                <button disabled={pagination.currentPage === pagination.lastPage} onClick={handleNext}>
                 next
                 </button>
             </div>
