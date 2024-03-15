@@ -63,6 +63,9 @@ function User () {
         <Layout>
             <div className="user">
             <h1 className="user-title">User</h1>
+            <div className="user-button-container">
+            <button className="user-button">Add User</button>
+            </div>
             <div className="user-body">
             {User.map((props) => (
                     <Card key={props} item={props}/>

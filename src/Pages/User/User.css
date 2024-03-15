@@ -11,6 +11,28 @@
 
 }
 
+.user-button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.user-button {
+    background: #b38531;
+    border: none;
+    color: #ebebed;
+    font-weight: bold;
+    padding: 8px 16px;
+    min-width: 20%;
+    font-size: 20px;
+    border-radius: 5%;
+    margin-top: 10vh;
+}
+
+.user-button:hover {
+    background: #e3b04b;
+    color: #f5f5f5;
+}
+
 .user-body {
     display: flex;
     align-items: center;
@@ -50,5 +72,17 @@
 
 .pagination-button {
     display: flex;
-    gap: 5px;
+    gap: 10px;
+}
+
+.pagination-button button {
+    background: #e3b04b;
+    border: none;
+    color: #ebebed;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 5px 10px;
+    min-width: 10%;
+    font-size: 110%;
+    border-radius: 5%;
 }
