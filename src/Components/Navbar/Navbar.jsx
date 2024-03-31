@@ -15,7 +15,7 @@ function Navbar () {
     return (
         <div className="navbar-container">
             <div className="logo">
-                <Link to={"/user"}><a href="">User<span>ly</span></a></Link>
+                <Link to={"/"}><a href="">User<span>ly</span></a></Link>
             </div>
             <div className="nav-button"> 
             {token ? (

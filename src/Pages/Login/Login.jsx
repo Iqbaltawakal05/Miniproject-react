@@ -62,8 +62,8 @@ function Login () {
         <div className="login-form">
             <h1>Sign in</h1>
             {!!notif.length && <h5>{notif}</h5>}
-            <input type="text" placeholder="Username/Email" onChange={handleUsernameChange} value={Username}/>
-            <input type="password" placeholder="Password" onChange={handlePasswordChange} value={Password}/>
+            <input type="text" placeholder="eve.holt@reqres.in" onChange={handleUsernameChange} value={Username}/>
+            <input type="password" placeholder="Pistol" onChange={handlePasswordChange} value={Password}/>
             <button disabled={loading} onClick={handleLogin}>{loading ? "Loading..." : "Sign in"}</button>
             <div className="link-register">
             <p>Don't have an account?</p>
